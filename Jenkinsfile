@@ -11,6 +11,7 @@ pipeline {
     post {
         always {
             echo 'This will always run'
+            slackSend(color: 'blue', message: 'hello', channel: "#fc-jenkins-test")
         }
     }
 }
